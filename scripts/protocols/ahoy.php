@@ -1,8 +1,9 @@
 <?php
-if (!defined('checkaccess') && FALSE) {die('Direct access not permitted');}
+if (!defined('checkaccess')) {
+    die('Direct access not permitted');
+}
 
 $CMD_RETURN = ''; // Always initialize
-$ip_addr = "192.168.178.99"; //change to local environment
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://".$ip_addr."/api/inverter/id/0");
 curl_setopt($ch, CURLOPT_TIMEOUT, 15);
